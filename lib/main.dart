@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/widgets/roun.dart';
+
+
  void main(){
    runApp(FlutterApp());
  }
@@ -11,6 +14,7 @@ import 'package:flutter/material.dart';
 
      title: "Flutter App",
      theme: ThemeData(primarySwatch: Colors.cyan),
+
    home:DashBoardScreen() ,
 
 
@@ -23,32 +27,19 @@ import 'package:flutter/material.dart';
 
    @override
    Widget build(BuildContext context) {
+     var name = ['rohitt','sdbyugb','gkuyasgdu','gyusgyf','byyusdaguy','hjahu'];
+     var time = DateTime.now();
      return Scaffold(
-     appBar: AppBar(
-     title: Text('DAshBoard'),
+     appBar: AppBar(  
+       
+     title: Text('DAshBoard',
      ),
-   body: Container(
-   width: double.infinity,
-   height: double.infinity,
-   child: Center(
-     child: Container(
-       decoration: BoxDecoration(
-         color: Colors.blue,
-         borderRadius: BorderRadius.circular(21),
-           border: Border.all(width: 4,
-       color: Colors.black),
-         boxShadow: [BoxShadow(
-           blurRadius: 11,
-           spreadRadius: 4
-         )]
+     ),
+   body: Button( btnName: 'Click', icon: Icon(Icons.lock), callBack: (){
 
-         
-       ),
-       width: 150,
-       height: 150,
-     
-     ),
-   ),),
+   },)
+
+
      );
    }
  }
